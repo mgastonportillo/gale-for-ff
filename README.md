@@ -1,6 +1,10 @@
 <h1 align="center">gale for Firefox</h1>
 <p align="center">My CSS files to use with Firefox and Sidebery</p>
+<hr>
+<p>My goal with these settings was to create a minimal yet functional setup with Sidebery tuned to match Firefox Default Dark Theme. If you find any odd behaviour feel free to send a pull request; I'll review it as soon as possible.</p>
+<hr>
 <p align="center"><img src="https://i.imgur.com/2TUcgwF.gif"></p>
+<hr>
 <h3>How to install?</h3>
 <ol>
 <li> In Firefox, go to <code>about:config</code> and set <code>toolkit.legacyUserProfileCustomizations.stylesheets</code> to <code>True</code></li>
