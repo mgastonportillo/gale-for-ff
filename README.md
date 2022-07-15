@@ -1,5 +1,6 @@
 <h1 align="center">gale for Firefox</h1>
 <p align="center">My CSS files to use with Firefox and Sidebery</p>
+<p align="center"><img src="https://i.imgur.com/2TUcgwF.gif"></p>
 <h3>How to install?</h3>
 <ol>
 <li> In Firefox, go to <code>about:config</code> and set <code>toolkit.legacyUserProfileCustomizations.stylesheets</code> to <code>True</code></li>
