@@ -1,0 +1,178 @@
+/* UNSUPPORTED START --
+  /* Stuff the original creator of the settings added, but
+  which I don't use so I don't support it */
+  #root {
+    /* Fallback bg image in case of Dark/Light Mode malfunction */
+    --bg: transparent !important;
+    background-image: url(https://i.imgur.com/Li0knJQ.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  } 
+  /* LIGHT MODE */
+  @media (prefers-color-scheme:light) {
+  #root {
+    --bg: transparent !important;
+    background-image: url(https://i.imgur.com/4dhK81E.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    --tabs-activated-bg: rgb(237, 243, 250) !important;
+  }
+  .NavigationBar {
+    background-color: rgb(249, 249, 251) !important;
+  }
+  .NavigationBar .panel-btn[data-active="true"] {
+    border-radius: 15px !important;
+  }
+  .NavigationBar {
+    padding: 4.5px !important;
+  }
+  }
+-- UNSUPPORTED END */
+
+
+/* START OF THE ACTUAL CSS */
+
+#root {
+  /* Tab and PinnedTab size adjustment */
+  --tabs-height: 36px;
+  --tabs-pinned-height: 36px;
+}
+
+.Tab .close > svg:hover{
+  border-radius: 3px;
+  background: #492121;
+  opacity: 100%;
+}
+
+
+/* DARK MODE */
+
+@media (prefers-color-scheme:dark) {
+  #root {
+    --bg: transparent !important;
+    background: rgb(28, 27, 34) !important;
+    --tabs-fg: rgb(212, 212, 212) !important;
+    --tabs-bg-hover: rgb(59, 57, 72) !important;
+    --tabs-activated-bg: rgb(82, 82, 94) !important;
+    --nav-btn-activated-bg: rgb(31, 34, 47) !important;
+  }
+
+  .NavigationBar {
+    background: rgb(43, 42, 51) !important;
+    display: flex;
+  }
+
+  #tabs .tabs-activated-bg {
+    background-color: rgb(66, 56, 113) !important;
+  }
+
+  /* Adjust Navbar Panel Button Styling */
+  .NavigationBar .panel-btn[data-active="true"] {
+    border-radius: 3px !important;
+    background-color: #1c1b22 !important;
+  }
+
+  .NavigationBar .panel-btn > svg,
+  .NavigationBar .panel-btn > img {
+    fill: rgb(242, 242, 242);
+  }
+
+}
+
+
+/* GENERAL SETTINGS */
+
+/* Align Sidebery NavBar Height with Firefox Toolbar Height */
+.NavigationBar {
+  height: 41px !important;
+  padding: 4.5px 0px 0px 4.5px !important;
+}
+
+/* Tab titles text overflow behaviour */
+.Tab .title {
+  overflow: hidden;
+}
+.Tab[data-active] {
+  background-color:var(--tabs-activated-bg);
+  border:var(--tabs-activated-border);
+  box-shadow:var(--tabs-activated-shadow)
+}
+
+#nav {
+  --nav-btn-bg: color: #112793ff !important;
+}
+
+#tabs .tabs-activated-bg {
+  background-color: rgb(249, 249, 251) !important;
+}
+
+
+/* TABS MARGINS */
+
+.Tab {
+  margin: auto;
+  margin-top: 5px;
+  width: 94%;
+  border-radius: 3px;
+}
+
+
+/* TABS COMPLEMENT FOR MINIMISED SIDEBAR HACK */
+
+@media (max-width: 50px) {
+  .Tab {
+    padding-left: 2px;
+    max-width: 34px;
+  }
+
+  .Tab .fav {
+    z-index: 1;
+    opacity: 100%;
+  }
+
+  .Tab .audio {
+    z-index: 1;
+    margin-left: -12px;
+    height: 26px;
+  }
+
+  .Tab .title {
+    display: none;
+  }
+
+  .NavigationBar .panel-btn {
+    width: 34px;
+  }
+
+  .NavigationBar .settings-btn {
+    display: none;
+  }
+
+  --autoFoldTabs: true;
+}
+
+
+/* PINNED TABS STYLING */
+
+.PinnedDock {
+  background-color: #1c1b22 !important;
+}
+
+.PinnedTab {
+  margin: 5px 0px 0px 5px;
+  border-radius: 3px;
+}
+
+
+/* OPTIONS: Enable these two snippets below to prevent pinned tabs getting wrapped */
+
+.PinnedDock {
+  flex-wrap: nowrap! important;
+}
+
+.PinnedTab {
+  overflow: hidden !important; 
+  min-width: var(--tabs-pinned-width) !important;
+}
