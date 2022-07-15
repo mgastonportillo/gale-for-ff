@@ -40,6 +40,12 @@
   --tabs-pinned-height: 36px;
 }
 
+#root:not(:hover) {
+  /* Remove indentation when the sidebar is not hovered as a visual patch */
+  /* Credits to Reddit user u/It_Was_The_Other_Guy */
+  --tabs-indent: 0;
+}
+
 .Tab .close > svg:hover{
   border-radius: 3px;
   background: #492121;
