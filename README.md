@@ -1,3 +1,4 @@
+<p align="center"><img src="image/gale_for_ff.png" width=100px height=100px></p>
 <h1 align="center">gale for Firefox</h1>
 <p align="center">My CSS files to use with Firefox and Sidebery</p>
 <hr>
