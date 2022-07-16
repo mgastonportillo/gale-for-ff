@@ -15,3 +15,10 @@
 <li> Go to Sidebery settings and paste the content of my <i>sidebery.css</i> file into <i>Styles editor > Sidebar</i> </li>
 <li> Enjoy your new setup!</li>
 </ol>
+<hr>
+<h3>Credits</h3>
+<ul>
+<li>to <a href="https://github.com/MrOtherGuy">@MrOtherGuy</a> for his <a href="https://github.com/MrOtherGuy/firefox-csshacks">Firefox CSS Hacks</a></li>
+<li>to <a href="https://www.reddit.com/user/captainkaba/">u/captainkaba</a> for his <a href="https://www.reddit.com/r/FirefoxCSS/comments/rqo5z6/some_people_asked_for_the_css_so_here_is_my_setup/">Denkfabrik</a> theme (which I used as a base for this project)</li>
+<li>to the Reddit user <a href="https://www.reddit.com/user/It_Was_The_Other_Guy/">u/It_Was_The_Other_Guy</a> for his <a href="https://www.reddit.com/r/FirefoxCSS/comments/vzcqzn/comment/ig8a8ba/?utm_source=share&utm_medium=web2x&context=3">tip</a></li>
+</ul>
