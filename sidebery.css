@@ -1,4 +1,4 @@
-/* MAIN */
+/* ROOT */
 
 #root {
   /* Tab and PinnedTab height adjustment */
@@ -18,32 +18,7 @@
 }
 
 
-/* TAB THEMING */
-
-.Tab .close>svg:hover {
-  /* Styling the tab close button */
-  border-radius: 3px;
-  background: #492121;
-  opacity: 100%;
-}
-
-#tabs .tabs-activated-bg {
-  background-color: rgb(66, 56, 113) !important;
-}
-
-.Tab .title {
-  overflow: hidden;
-}
-
-.Tab[data-active] {
-  background-color: var(--tabs-activated-bg);
-  border: var(--tabs-activated-border);
-  box-shadow: var(--tabs-activated-shadow)
-}
-
-#tabs .tabs-activated-bg {
-  background-color: rgb(249, 249, 251) !important;
-}
+/* TABS */
 
 .Tab {
   margin: auto;
@@ -52,8 +27,19 @@
   border-radius: 3px;
 }
 
+.Tab .close > svg:hover {
+  /* Styling the tab close button */
+  border-radius: 3px;
+  background: #492121;
+  opacity: 100%;
+}
 
-/* PINNED TAB THEMING */
+.Tab .title {
+  overflow: hidden;
+}
+
+
+/* PINNED TABS */
 
 .PinnedDock {
   background-color: #1c1b22 !important;
@@ -65,17 +51,17 @@
 }
 
 
-/* NAV BAR THEMING */
-
-#nav {
-  --nav-btn-bg: color: #112793ff !important;
-}
+/* NAV BAR */
 
 .NavigationBar {
   height: 41px !important;
   padding: 4.5px 0px 0px 4.5px !important;
-  background: rgb(43, 42, 51) !important;
-  display: flex;
+  background-color: rgb(43, 42, 51) !important;
+}
+
+.NavigationBar .panel-btn:hover {
+  border-radius: 3px !important;
+  background-color: #3b3948 !important;
 }
 
 .NavigationBar .panel-btn[data-active="true"] {
@@ -83,13 +69,18 @@
   background-color: #1c1b22 !important;
 }
 
-.NavigationBar .panel-btn>svg,
-.NavigationBar .panel-btn>img {
+.NavigationBar .panel-btn[data-active="true"]:hover {
+  border-radius: 3px !important;
+  background-color: #3b3948 !important;
+}
+
+.NavigationBar .panel-btn > svg,
+.NavigationBar .panel-btn > img {
   fill: rgb(242, 242, 242);
 }
 
 
-/* SIDEBAR HACK THEMING */
+/* SIDEBAR HACK PATCHES */
 
 @media (max-width: 50px) {
   .Tab {
@@ -99,7 +90,6 @@
 
   .Tab .fav {
     z-index: 1;
-    opacity: 100%;
   }
 
   .Tab .audio {
@@ -112,10 +102,6 @@
     display: none;
   }
 
-  .NavigationBar .panel-btn {
-    width: 34px;
-  }
-
   .NavigationBar .settings-btn {
     display: none;
   }
@@ -126,10 +112,10 @@
 
 /* Disable these two snippets below to make pinned tabs wrap when minimised */
 .PinnedDock {
-  flex-wrap: nowrap ! important;
+  flex-wrap: nowrap! important;
 }
 
 .PinnedTab {
-  overflow: hidden !important;
+  overflow: hidden !important; 
   min-width: var(--tabs-pinned-width) !important;
 }
