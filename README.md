@@ -1,10 +1,10 @@
-<p align="center"><img src="image/gale_for_ff.png" width=100px height=100px></p>
+<p align="center"><img src="image/logo.png" width=100px height=100px></p>
 <h1 align="center">gale for Firefox</h1>
 <p align="center">My CSS files to use with Firefox and Sidebery</p>
 <hr>
 <p>My goal with these settings was to create a minimalistic yet functional setup with Sidebery tuned to match Firefox Default Dark Theme. If you find any odd behaviour feel free to send a pull request; I'll review it as soon as possible.</p>
 <hr>
-<p align="center"><img src="https://i.imgur.com/2TUcgwF.gif"></p>
+<p align="center"><img src="image/showcase.png"></p>
 <hr>
 <h3>How to install?</h3>
 <ol>
