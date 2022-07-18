@@ -4,7 +4,7 @@
 <hr>
 <p>My goal with these settings was to create a minimalistic yet functional setup with Sidebery tuned to match Firefox Default Dark Theme. If you find any odd behaviour feel free to send a pull request; I'll review it as soon as possible.</p>
 <hr>
-<p align="center"><img src="image/showcase.png"></p>
+<p align="center"><img src="image/thumbnail.png"></p>
 <hr>
 <h3>How to install?</h3>
 <ol>
