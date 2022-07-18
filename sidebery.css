@@ -2,10 +2,10 @@
 
 #root {
   /* Tab and PinnedTab height adjustment */
-  --tabs-height: 30px;
-  --tabs-pinned-height: 30px;
+  --tabs-height: 33px;
+  --tabs-pinned-height: var(--tabs-height);
   /* Dark Theme base settings */
-  --bg: rgb(28, 27, 34) !important;
+  --bg: #1c1b22 !important;
   --tabs-fg: rgb(212, 212, 212) !important;
   --tabs-bg-hover: rgb(59, 57, 72) !important;
   --tabs-activated-bg: rgb(82, 82, 94) !important;
@@ -14,7 +14,7 @@
 
 #root:not(:hover) {
   /* Removes tab tree indentation when the sidebar is not hovered */
-  --tabs-indent: 0;
+  --tabs-indent: 2px;
 }
 
 
@@ -42,11 +42,11 @@
 /* PINNED TABS */
 
 .PinnedDock {
-  background-color: #1c1b22 !important;
+  background-color: var(--bg) !important;
 }
 
 .PinnedTab {
-  margin: 5px 0px 0px 5px;
+  margin: 5px 0px 4px 6px;
   border-radius: 3px;
 }
 
@@ -66,7 +66,7 @@
 
 .NavigationBar .panel-btn[data-active="true"] {
   border-radius: 3px !important;
-  background-color: #1c1b22 !important;
+  background-color: var(--bg) !important;
 }
 
 .NavigationBar .panel-btn[data-active="true"]:hover {
@@ -100,6 +100,10 @@
 
   .Tab .title {
     display: none;
+  }
+
+  .PinnedTab {
+    margin-left: 5px;
   }
 
   .NavigationBar .settings-btn {
