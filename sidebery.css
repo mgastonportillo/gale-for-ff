@@ -6,11 +6,10 @@
   --tabs-pinned-height: var(--tabs-height);
   /* Dark Theme base settings */
   --bg: #1c1b22 !important;
-  --tabs-fg: rgb(212, 212, 212) !important;
-  --tabs-bg-hover: rgb(59, 57, 72) !important;
-  --tabs-activated-bg: rgb(82, 82, 94) !important;
-  --nav-btn-activated-bg: rgb(31, 34, 47) !important;
-  --tabs-lvl-indicator-bg: white !important;
+  --tabs-fg: #d4d4d4 !important;
+  --tabs-bg-hover: #3b3948 !important;
+  --tabs-activated-bg: #52525e !important;
+  --nav-btn-activated-bg: #1f222f !important;
 }
 
 #root .Tab {
@@ -29,12 +28,12 @@
 .Tab .close > svg:hover {
   /* Styling the tab close button */
   border-radius: 3px;
-  background: #492121;
+  background: #492121 !important;
   opacity: 100%;
 }
 
 .Tab .title {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 
@@ -55,12 +54,12 @@
 .NavigationBar {
   height: 41px !important;
   padding: 4.5px 0px 0px 4.5px !important;
-  background-color: rgb(43, 42, 51) !important;
+  background-color: #2B2A33 !important;
 }
 
 .NavigationBar .panel-btn:hover {
   border-radius: 3px !important;
-  background-color: #3b3948 !important;
+  background-color: var(--tabs-bg-hover) !important;
 }
 
 .NavigationBar .panel-btn[data-active="true"] {
@@ -70,12 +69,12 @@
 
 .NavigationBar .panel-btn[data-active="true"]:hover {
   border-radius: 3px !important;
-  background-color: #3b3948 !important;
+  background-color: var(--tabs-bg-hover) !important;
 }
 
 .NavigationBar .panel-btn > svg,
 .NavigationBar .panel-btn > img {
-  fill: rgb(242, 242, 242);
+  fill: #f2f2f2 !important;
 }
 
 
@@ -84,11 +83,11 @@
 @media (max-width: 50px) {
   /* Fix to tab tree identation when minimised */
   #root:not(:hover) .Tab {
-    --tabs-indent: 0px !important;
+    --tabs-indent: 0px;
   }
 
   .Tab[data-lvl] > div.lvl-wrapper {
-    right: -2px !important;
+    right: -2px;
   }
   
   .Tab {
