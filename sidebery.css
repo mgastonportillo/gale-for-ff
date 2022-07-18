@@ -12,11 +12,6 @@
   --nav-btn-activated-bg: rgb(31, 34, 47) !important;
 }
 
-#root:not(:hover) {
-  /* Removes tab tree indentation when the sidebar is not hovered */
-  --tabs-indent: 2px;
-}
-
 
 /* TABS */
 
@@ -83,6 +78,11 @@
 /* SIDEBAR HACK PATCHES */
 
 @media (max-width: 50px) {
+  #root:not(:hover) {
+    /* Removes tab tree indentation when the sidebar is not hovered */
+    --tabs-indent: 2px;
+  }
+  
   .Tab {
     padding-left: 2px;
     max-width: 34px;
