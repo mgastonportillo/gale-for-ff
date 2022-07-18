@@ -10,8 +10,12 @@
   --tabs-bg-hover: rgb(59, 57, 72) !important;
   --tabs-activated-bg: rgb(82, 82, 94) !important;
   --nav-btn-activated-bg: rgb(31, 34, 47) !important;
+  --tabs-lvl-indicator-bg: white !important;
 }
 
+#root .Tab {
+ --tabs-indent: 7px;
+}
 
 /* TABS */
 
@@ -78,13 +82,16 @@
 /* SIDEBAR HACK PATCHES */
 
 @media (max-width: 50px) {
-  #root:not(:hover) {
-    /* Removes tab tree indentation when the sidebar is not hovered */
-    --tabs-indent: 2px;
+  /* Fix to tab tree identation when minimised */
+  #root:not(:hover) .Tab {
+    --tabs-indent: 0px !important;
+  }
+
+  .Tab[data-lvl] > div.lvl-wrapper {
+    right: -2px !important;
   }
   
   .Tab {
-    padding-left: 2px;
     max-width: 34px;
   }
 
