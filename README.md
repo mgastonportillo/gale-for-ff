@@ -2,7 +2,7 @@
 <h1 align="center">gale for Firefox</h1>
 <p align="center">My CSS files to use with Firefox and Sidebery</p>
 <hr>
-<p>My goal with these settings was to create a minimalistic yet functional setup with Sidebery tuned to match Firefox Default Dark Theme. If you find any odd behaviour feel free to send a pull request.</p>
+<p>My goal with these settings was to create a minimalistic yet functional setup with Sidebery tuned to match Firefox Default Dark Theme and optimise the workspace. If you find any odd behaviour feel free to send a pull request.</p>
 <hr>
 <p align="center"><img src="image/thumbnail.png"></p>
 <hr>
