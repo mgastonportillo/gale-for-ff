@@ -16,6 +16,11 @@
 <li> Enjoy your new setup!</li>
 </ol>
 <hr>
+<h3>Known bugs</h3>
+<ul>
+<li> When moving a tab, the tab position indicator doesn't follow the <code>margin-top</code> CSS rule for tabs; if it bothers you a lot, identify <code>.Tab {margin-top: 5px;</code> and remove it.</li>
+</ul>
+<hr>
 <h3>Credits</h3>
 <ul>
 <li>to <a href="https://github.com/MrOtherGuy">@MrOtherGuy</a> for his <a href="https://github.com/MrOtherGuy/firefox-csshacks">Firefox CSS Hacks</a></li>
