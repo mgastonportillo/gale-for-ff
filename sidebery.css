@@ -8,7 +8,7 @@
   --bg: #1c1b22 !important;
   --tabs-fg: #d4d4d4 !important;
   --tabs-bg-hover: #3b3948 !important;
-  --tabs-activated-bg: #52525e !important;
+  --tabs-activated-bg: #5b5b66 !important;
   --nav-btn-activated-bg: #1f222f !important;
 }
 
@@ -18,9 +18,12 @@
 
 /* TABS */
 
+.Tab .lvl-wrapper:after {
+  display: none;
+}
+
 .Tab {
-  margin: auto;
-  margin-top: 5px;
+margin: auto;
   width: 94%;
   border-radius: 3px;
 }
@@ -55,6 +58,7 @@
   height: 41px !important;
   padding: 4.5px 0px 0px 4.5px !important;
   background-color: #2B2A33 !important;
+  margin-bottom: 5px;
 }
 
 .NavigationBar .panel-btn:hover {
