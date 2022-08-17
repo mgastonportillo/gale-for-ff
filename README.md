@@ -18,7 +18,7 @@
 <hr>
 <h3>Known bugs</h3>
 <ul>
-<li> When moving a tab, the tab position indicator doesn't follow the <code>margin-top</code> CSS rule for tabs; if it bothers you a lot, identify <code>.Tab {margin-top: 5px;</code> and remove it.</li>
+<li><span style="text-decoration: line-through;">When moving a tab, the tab position indicator doesn't follow the <code>margin-top</code> CSS rule for tabs; if it bothers you a lot, identify <code>.Tab {margin-top: 5px;</code> and remove it.</span><b><i>&nbsp;&nbsp;Fixed!</i></b></li>
 </ul>
 <hr>
 <h3>Credits</h3>
