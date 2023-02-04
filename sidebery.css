@@ -144,7 +144,7 @@
   opacity: 100;
 }
 
-.PinnedTab[data-update=true] .fav > img {
+.PinnedTab[data-updated=true] .fav > img {
   mask: radial-gradient(circle at calc(100% - 2px) calc(100% - 2px),rgba(0,0,0,0.141),rgba(0,0,0,0.141) 4px,#000 5px,#000);
 }
 */
