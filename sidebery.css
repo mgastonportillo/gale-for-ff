@@ -132,19 +132,23 @@
 
 /* Optional patch for better tab notifications on pinned tabs */
 /*
-.PinnedTab[data-muted=true] .audio-badge {
+.PinnedTab[data-muted="true"] .fav > img {
+  mask: none
+}
+
+.PinnedTab[data-updated="true"] .fav > img {
+  mask: radial-gradient(circle at calc(100% - 2px) calc(100% - 2px),rgba(0,0,0,0.141),rgba(0,0,0,0.141) 4px,#000 5px,#000);
+}
+
+.PinnedTab .audio-badge {
   top: 5px;
 }
 
-.PinnedTab[data-updated=false] .update-badge {
+.PinnedTab .update-badge {
   opacity: 0;
 }
 
-.PinnedTab[data-updated=true] .update-badge {
+.PinnedTab[data-updated="true"] .update-badge {
   opacity: 100;
-}
-
-.PinnedTab[data-updated=true] .fav > img {
-  mask: radial-gradient(circle at calc(100% - 2px) calc(100% - 2px),rgba(0,0,0,0.141),rgba(0,0,0,0.141) 4px,#000 5px,#000);
 }
 */
