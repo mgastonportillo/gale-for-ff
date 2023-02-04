@@ -132,8 +132,14 @@
 
 /* Optional patch for better tab notifications on pinned tabs */
 /*
-.PinnedTab[data-muted="true"] .fav > img {
-  mask: none
+.PinnedTab[data-audible] .fav > img,
+.PinnedTab[data-muted] .fav > img,
+.PinnedTab[data-loading] .fav > img {
+  mask: none;
+}
+
+.PinnedTab .fav > img {
+  mask: none;
 }
 
 .PinnedTab[data-updated="true"] .fav > img {
