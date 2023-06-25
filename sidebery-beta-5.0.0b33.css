@@ -1,0 +1,166 @@
+/*
+				MAIN
+*/
+
+#root {
+	--tabs-height: 35px;
+	--tabs-width: 35px;
+	--tabs-pinned-height: var(--tabs-height);
+	--tabs-pinned-width: var(--tabs-width);
+	--bg: #1c1b22;
+	--tabs-fg: #d4d4d4;
+	--tabs-bg-hover: #3b3948;
+	--tabs-activated-bg: #5b5b66;
+	--nav-btn-activated-bg: #1f222f;
+}
+
+#root .Tab {
+	--tabs-indent: 7px;
+}
+
+/*
+				TABS
+*/
+
+.Tab .lvl-wrapper:after {
+	display: none;
+}
+
+.Tab {
+	margin-bottom: 2px;
+	border-radius: 3px;
+}
+
+.Tab .close:hover {
+	background: none;
+}
+
+.Tab[data-active="true"] .close:hover {
+	background: #42414d;
+}
+
+.Tab .close > svg:hover {
+	/* Styling the tab close button */
+	border-radius: 3px;
+	background: rgba(255, 0, 0, 0.17);
+	opacity: 100%;
+}
+
+.Tab .title {
+	overflow: hidden;
+}
+
+
+/*
+				PINNED TABS
+*/
+
+.PinnedTabsBar {
+	background-color: var(--bg);
+}
+
+
+/*
+				NAVIGATION BAR
+*/
+
+.NavigationBar {
+	margin: 0 2px;
+	height: var(--tabs-height);
+}
+
+.NavigationBar .static-btns {
+	margin-right: 5px;
+}
+
+.NavigationBar .audio {
+	display: none;
+}
+
+/*
+				COLLAPSED TWEAKS
+*/
+
+@media (max-width: 50px) {
+	#root {
+		--tabs-pinned-height: var(--tabs-height);
+		--tabs-pinned-width: var(--tabs-width);
+	}
+
+	#root:not(:hover) .Tab {
+		--tabs-indent: 0px;
+	}
+
+	.NavigationBar .main-items .nav-item[data-index="-1"][data-active="true"] {
+		background: none;
+		z-index: 1;
+		opacity: inherit;
+		transform: scale(1,1);
+	}
+
+	.NavigationBar .static-btns {
+		display: none;
+	}
+
+	.Tab {
+		width: var(--tabs-width);
+		height: var(--tabs-height);
+	}
+
+	.t-box, .close {
+		display: none;
+	}
+
+	.ScrollBox .Tab .fav {
+		margin: auto;
+		z-index: 1;
+	}
+
+	.ScrollBox .Tab .audio {
+		z-index: 1;
+		margin: -7px;
+	}
+
+	.Tab .title {
+		display: none;
+	}
+
+	.PinnedTabsBar {
+		margin-left: 2px;
+	}
+
+	.NavigationBar .settings-btn {
+		display: none;
+	}
+}
+
+/*
+				CUSTOM TWEAKS
+*/
+
+/* Better notifications on pinned tabs */
+.PinnedTabsBar[data-audible] .fav > img,
+.PinnedTabsBar[data-muted] .fav > img,
+.PinnedTabsBar[data-loading] .fav > img {
+  mask: none;
+}
+
+.PinnedTabsBar .fav-icon {
+  mask: none;
+}
+
+.PinnedTabsBar[data-updated="true"] .fav > img {
+  mask: radial-gradient(circle at calc(100% - 2px) calc(100% - 2px),rgba(0,0,0,0.141),rgba(0,0,0,0.141) 4px,#000 5px,#000);
+}
+
+.audio {
+	color: red;
+}
+
+.PinnedTabsBar .update-badge {
+  opacity: 0;
+}
+
+.PinnedTabsBar[data-updated="true"] .update-badge {
+  opacity: 100;
+}
