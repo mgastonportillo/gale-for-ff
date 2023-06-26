@@ -2,7 +2,7 @@
 				MAIN
 */
 
-#root {
+#root.root {
   --bg: #1c1b22;
   --nav-btn-activated-bg: #1f222f;
 }
@@ -11,14 +11,14 @@
 				TABS
 */
 
-#root {
+#root.root {
   --tabs-height: 35px;
   --tabs-width: 35px;
   --tabs-pinned-height: var(--tabs-height);
   --tabs-pinned-width: var(--tabs-width);
   --tabs-fg: #d4d4d4;
   --tabs-bg-hover: #3b3948;
-  --tabs-activated-bg: #5b5b66;
+  --tabs-activated-bg: #42414d;
   --tabs-indent: 10px;
 }
 
@@ -56,9 +56,6 @@
 /*
 				NAVIGATION BAR
 */
-
-.NavigationBar {
-}
 
 .NavigationBar .main-items {
   margin-left: 2px;
