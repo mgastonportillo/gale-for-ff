@@ -3,27 +3,26 @@
 */
 
 #root {
-  --tabs-height: 35px;
-  --tabs-width: 35px;
-  --tabs-pinned-height: var(--tabs-height);
-  --tabs-pinned-width: var(--tabs-width);
   --bg: #1c1b22;
-  --tabs-fg: #d4d4d4;
-  --tabs-bg-hover: #3b3948;
-  --tabs-activated-bg: #5b5b66;
   --nav-btn-activated-bg: #1f222f;
-}
-
-#root .Tab {
-  --tabs-indent: 7px;
 }
 
 /*
 				TABS
 */
 
+#root {
+  --tabs-height: 35px;
+  --tabs-width: 35px;
+  --tabs-pinned-height: var(--tabs-height);
+  --tabs-pinned-width: var(--tabs-width);
+  --tabs-fg: #d4d4d4;
+  --tabs-bg-hover: #3b3948;
+  --tabs-activated-bg: #5b5b66;
+  --tabs-indent: 10px;
+}
+
 .Tab {
-  margin-bottom: 2px;
   border-radius: 3px;
 }
 
@@ -59,12 +58,14 @@
 */
 
 .NavigationBar {
-  margin: 0 2px;
-  height: var(--tabs-height);
+}
+
+.NavigationBar .main-items {
+  margin-left: 2px;
 }
 
 .NavigationBar .static-btns {
-  margin-right: 5px;
+  margin-right: 2px;
 }
 
 .NavigationBar .audio {
@@ -88,6 +89,7 @@
   .NavigationBar .main-items .nav-item[data-index="-1"][data-active="true"] {
     background: none;
     z-index: 1;
+    box-shadow: none;
     opacity: inherit;
     transform: scale(1, 1);
   }
@@ -105,6 +107,10 @@
     height: var(--tabs-height);
   }
 
+  .Tab .title {
+    display: none;
+  }
+
   .t-box,
   .close {
     display: none;
@@ -118,18 +124,6 @@
   .ScrollBox .Tab .audio {
     z-index: 1;
     margin: -7px;
-  }
-
-  .Tab .title {
-    display: none;
-  }
-
-  .PinnedTabsBar {
-    margin-left: 2px;
-  }
-
-  .NavigationBar .settings-btn {
-    display: none;
   }
 }
 
