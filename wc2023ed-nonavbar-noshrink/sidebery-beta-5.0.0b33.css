@@ -1,0 +1,117 @@
+/* ⭐️⭐️⭐️ CAMPEÓN DEL MUNDO EDITION ⭐️⭐️⭐️ */
+
+/*
+				TABS
+*/
+
+#root.root {
+  --tabs-height: 35px;
+  --tabs-width: 35px;
+  --tabs-pinned-height: var(--tabs-height);
+  --tabs-pinned-width: var(--tabs-width);
+  --tabs-fg: #d4d4d4;
+  --tabs-bg-hover: #3b3948;
+  --tabs-activated-bg: #42414d;
+  --tabs-indent: 10px;
+}
+
+.Tab {
+  border-radius: 3px;
+}
+
+.Tab .close:hover {
+  background: none;
+}
+
+.Tab[data-active="true"] .close:hover {
+  background: #42414d;
+}
+
+.Tab .close > svg:hover {
+  /* Styling the tab close button */
+  border-radius: 50px;
+  background: #d10032;
+  opacity: 100%;
+}
+
+.Tab .title {
+  overflow: hidden;
+}
+
+/*
+				PINNED TABS
+*/
+
+.PinnedTabsBar {
+  background-color: var(--bg);
+}
+
+/*
+				NAVIGATION BAR
+*/
+
+.NavigationBar .main-items,
+.NavigationBar .static-btns {
+  display: none;
+}
+
+.NavigationBar {
+  height: 3rem;
+}
+
+.NavigationBar:before {
+  content: "";
+  position: relative;
+  height: 2.5rem;
+  width: 100%;
+  margin: auto;
+  background: linear-gradient(
+    180deg,
+    #75aadb 30%,
+    white 30%,
+    white 70%,
+    #75aadb 70%
+  );
+  mix-blend-mode: overlay;
+}
+
+.NavigationBar:after {
+  content: "⭐️ ⭐️ ⭐️";
+  position: absolute;
+  text-align: center;
+  line-height: 45px;
+  width: 100%;
+}
+
+/*
+				CUSTOM TWEAKS
+*/
+
+/* Better notifications on pinned tabs */
+.PinnedTabsBar[data-audible] .fav > img,
+.PinnedTabsBar[data-muted] .fav > img,
+.PinnedTabsBar[data-loading] .fav > img {
+  mask: none;
+}
+
+.PinnedTabsBar .fav-icon {
+  mask: none;
+}
+
+.PinnedTabsBar[data-updated="true"] .fav > img {
+  mask: radial-gradient(
+    circle at calc(100% - 2px) calc(100% - 2px),
+    rgba(0, 0, 0, 0.141),
+    rgba(0, 0, 0, 0.141) 4px,
+    #000 5px,
+    #000
+  );
+}
+
+.PinnedTabsBar .update-badge {
+  opacity: 0;
+}
+
+.PinnedTabsBar[data-updated="true"] .update-badge {
+  opacity: 100;
+}
