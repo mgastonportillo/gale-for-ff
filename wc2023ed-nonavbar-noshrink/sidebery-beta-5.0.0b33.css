@@ -1,61 +1,39 @@
 /* ⭐️⭐️⭐️ CAMPEÓN DEL MUNDO EDITION ⭐️⭐️⭐️ */
 
-/*
-				TABS
-*/
+/* --- FORCE DARK THEME (I don't plan to support light theme) --- */
 
 #root.root {
-  --tabs-height: 35px;
-  --tabs-width: 35px;
-  --tabs-pinned-height: var(--tabs-height);
-  --tabs-pinned-width: var(--tabs-width);
-  --tabs-fg: #d4d4d4;
-  --tabs-bg-hover: #3b3948;
-  --tabs-activated-bg: #42414d;
-  --tabs-indent: 10px;
+  --s-frame-bg: #1c1b22 !important;
+  --s-frame-fg: #fbfbfe !important;
+  --s-toolbar-bg: #2b2a33 !important;
+  --s-toolbar-fg: #fbfbfe !important;
+  --s-act-el-bg: #42414d !important;
+  --s-act-el-fg: #fbfbfe !important;
+  --s-popup-bg: #42414d !important;
+  --s-popup-fg: #fbfbfe !important;
+  --s-popup-border: #52525e !important;
+  --tabs-bg-hover: #3b3948 !important;
+  --tabs-activated-bg: #42414d !important;
+  --tabs-activated-fg: #fbfbfe !important;
+  --tabs-fg: #d4d4d4 !important;
+  --tabs-progress-bg: rgba(255, 255, 255, 0.086);
+  --tabs-lvl-opacity: 0.16;
+  --frame-el-bg: transparent !important;
+  --frame-bg: var(--s-frame-bg, #282828) !important;
+  --frame-fg: var(--s-frame-fg, #ccc) !important;
+  --frame-el-overlay-hover-bg: rgba(255, 255, 255, 0.086) !important;
+  --frame-el-overlay-clicked-bg: rgba(255, 255, 255, 0.141) !important;
+  --frame-el-overlay-selected-bg: rgba(255, 255, 255, 0.141) !important;
+  --frame-el-overlay-selected-border: var(--s-accent, #47cfff) !important;
+  --frame-scrollbar-color: rgba(255, 255, 255, 0.275) !important;
+  --active-el-bg: var(--s-act-el-bg, rgba(255, 255, 255, 0.141)) !important;
+  --active-el-fg: var(--s-act-el-fg, #fff);
 }
 
-.Tab {
-  border-radius: 3px;
-}
-
-.Tab .close:hover {
-  background: none;
-}
-
-.Tab[data-active="true"] .close:hover {
-  background: #42414d;
-}
-
-.Tab .close > svg:hover {
-  /* Styling the tab close button */
-  border-radius: 50px;
-  background: #d10032;
-  opacity: 100%;
-}
-
-.Tab .title {
-  overflow: hidden;
-}
-
-/*
-				PINNED TABS
-*/
-
-.PinnedTabsBar {
-  background-color: var(--bg);
-}
-
-/*
-				NAVIGATION BAR
-*/
-
-.NavigationBar .main-items,
-.NavigationBar .static-btns {
-  display: none;
-}
+/* --- NAVIGATION BAR --- */
 
 .NavigationBar {
+  /* display: none; uncomment this line to disable the 🇦🇷 flag and the stars */
   height: 3rem;
 }
 
@@ -83,35 +61,52 @@
   width: 100%;
 }
 
-/*
-				CUSTOM TWEAKS
-*/
-
-/* Better notifications on pinned tabs */
-.PinnedTabsBar[data-audible] .fav > img,
-.PinnedTabsBar[data-muted] .fav > img,
-.PinnedTabsBar[data-loading] .fav > img {
-  mask: none;
+.NavigationBar .main-items {
+  display: none;
 }
 
-.PinnedTabsBar .fav-icon {
-  mask: none;
+.NavigationBar .static-btns {
+  order: -1;
 }
 
-.PinnedTabsBar[data-updated="true"] .fav > img {
-  mask: radial-gradient(
-    circle at calc(100% - 2px) calc(100% - 2px),
-    rgba(0, 0, 0, 0.141),
-    rgba(0, 0, 0, 0.141) 4px,
-    #000 5px,
-    #000
-  );
+/* Hidden on top of the star to the far left */
+.NavigationBar #settings {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 15px;
+  left: 105px;
+  filter: opacity(0%);
 }
 
-.PinnedTabsBar .update-badge {
-  opacity: 0;
+/* --- TABS --- */
+
+#root.root {
+  --tabs-height: 35px;
+  --tabs-width: 35px;
+  --tabs-pinned-height: var(--tabs-height);
+  --tabs-pinned-width: var(--tabs-width);
+  --tabs-fg: #d4d4d4;
+  --tabs-bg-hover: #3b3948;
+  --tabs-activated-bg: #42414d;
+  --tabs-indent: 10px;
 }
 
-.PinnedTabsBar[data-updated="true"] .update-badge {
-  opacity: 100;
+.Tab .close:hover {
+  background: transparent !important;
 }
+
+.Tab .close > svg:hover {
+  /* Styling the tab close button */
+  border-radius: 50px;
+  background: #d10032;
+  opacity: 100%;
+}
+
+.Tab .audio {
+  background: transparent !important;
+}
+
+/* --- IMPROVEMENTS --- */
+
+/* Testing some things; I'll add them soon */
