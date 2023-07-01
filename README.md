@@ -24,14 +24,16 @@ different issues depending on the distro and Firefox is just a huge linux
 champion in my opinion. So that's it, my affair with Edge is over and I'm back
 to maintaining this theme actively.
 
+<hr>
+
 ### How to install?
 
 <ol>
 <li> In Firefox, go to <code>about:config</code> and set <code>toolkit.legacyUserProfileCustomizations.stylesheets</code> to <code>True</code></li>
-<li> Make sure you have <i>userChrome.css</i> file and folder path created <a href="https://www.userchrome.org/how-create-userchrome-css.html">properly</a></li>
-<li> Get <a href="https://addons.mozilla.org/firefox/addon/sidebery">Sidebery</a> if you don't have it already installed</li>
+<li> Make sure you have <code>userChrome.css</code> file and folder path created <a href="https://www.userchrome.org/how-create-userchrome-css.html">properly</a></li>
+<li> Get <a href="https://github.com/mbnuqw/sidebery/">Sidebery</a> if you don't have it already installed</li>
 <li> Copy the content in my <i>userChrome.css</i> to your file (I don't support this method) or replace/copy it in the corresponding folder path</li>
-<li> Go to Sidebery settings and paste the content of my <i>sidebery.css</i> file into <i>Styles editor > Sidebar</i> </li>
+<li> Go to Sidebery settings and paste the content of my <code>sidebery.css</code> file into <i>Styles editor > Sidebar</i> </li>
 <li> Enjoy your new setup!</li>
 </ol>
 <hr>
@@ -39,7 +41,7 @@ to maintaining this theme actively.
 ### Known bugs
 
 <ul>
-<li>In Sidebery beta, autoshrink triggers when you're moving a tab even though the mouse is still hovering the panel. It's quite annoying and I don't really have control over that behaviour unless I decide to contribute to Sidebery and I don't really have time for that. If you move your tabs around a lot, my recommendation is to disable autoshrink by commenting the code block related to it in <code>userChrome</code>. It is disabled by default in the "Campeón del Mundo Edition" (wc2023ed).</li>
+<li>In Sidebery beta, autoshrink triggers when you're moving a tab even though the mouse is still hovering the panel. I decided to disable that characteristic until I find a workaround.</li>
 <li><span style="text-decoration: line-through;">When moving a tab, the tab position indicator doesn't follow the <code>margin-top</code> CSS rule for tabs; if it bothers you a lot, identify <code>.Tab {margin-top: 5px;</code> and remove it.</span><b><i>&nbsp;&nbsp;Fixed!</i></b></li>
 </ul>
 <hr>
