@@ -1,13 +1,9 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/* --- TAB AND TITLE BAR --- */
 
-/*
-			TAB AND TITLE BAR
-*/
-/* hide native tabs and make room for window buttons */
-#nav-bar {
-  margin-top: -37px !important;
-  padding-right: 100px !important;
-  margin-bottom: -4px !important;
+/* Hide native tabs and title bar */
+#TabsToolbar {
+  visibility: collapse !important;
+  height: 0 !important;
 }
 
 /* mini patch to hide native tabs correctly */
@@ -26,20 +22,21 @@
   height: 0px;
 }
 
-/*
-			SIDEBAR
-*/
-/* hide the sidebar header */
+/* --- SIDEBAR --- */
+
 #sidebar-header {
-  display: none !important;
+  /* uncomment to hide the sidebar header */
+  /* display: none !important; */
+  border-bottom: none !important;
+  border: none !important;
 }
 
-/* set sidebar size and position */
 #sidebar-box {
-  --sidebar-width: 40px;
-  --sidebar-hover-width: 262px;
-  --autohide-sidebar-delay: 600ms;
+  margin-top: -1px;
   position: relative;
+  --sidebar-width: 267px;
+  --sidebar-background-color: #2b2a33 !important;
+  --sidebar-text-color: #fbfbfe !important;
   min-width: var(--sidebar-width) !important;
   width: var(--sidebar-width) !important;
   max-width: var(--sidebar-width) !important;
@@ -56,44 +53,82 @@
 #sidebar-box[positionend]:-moz-locale-dir(rtl) {
   direction: ltr;
 }
+
 #sidebar-box[positionend]:-moz-locale-dir(rtl) > * {
   direction: rtl;
 }
 
-#main-window[sizemode="fullscreen"] #sidebar-box {
-  --sidebar-width: 1px;
+.content-header {
+  background: #2b2a33 !important;
+}
+
+.content-scrollable {
+  background: #1c1b22 !important;
+}
+
+#sidebar-icon {
+  filter: contrast(150%);
+  opacity: 1;
+}
+
+.sidebar-placesTree {
+  border-top-right-radius: 6px;
+  background: #1c1b22 !important;
+  color: #d4d4d4;
+}
+
+/* for sidebars placed to the left (default) */
+.sidebar-placesTree:before {
+  content: "";
+  z-index: -1;
+  background: #2b2a33 !important;
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 45px;
+  right: 0;
+}
+
+.sidebar-placesTree {
+  border-top-left-radius: 6px;
+  background: #1c1b22 !important;
+  color: #d4d4d4;
+}
+
+/* for sidebars placed to the right */
+/* .sidebar-placesTree:before {
+  content: "";
+  z-index: -1;
+  background: #2b2a33 !important;
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 45px;
+  left: 0;
+} */
+
+#sidebar-title {
+  font-size: 1.1rem;
+}
+
+#sidebar-close {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+#sidebar-close:hover {
+  opacity: 1;
+}
+
+#historyTree .sidebar-placesTreechildren {
+  margin-left: -8px;
 }
 
 #sidebar-splitter {
   display: none;
 }
 
-#sidebar {
-  transition: min-width 115ms linear var(--autohide-sidebar-delay) !important;
-  min-width: var(--sidebar-width) !important;
-  will-change: min-width;
-}
-
-/* comment this block out to disable auto resize */
-#sidebar-box:hover > #sidebar {
-  min-width: var(--sidebar-hover-width) !important;
-  transition-delay: 0ms !important;
-}
-
-.sidebar-panel {
-  background-color: transparent !important;
-  color: var(--newtab-text-primary-color) !important;
-}
-
-.sidebar-panel #search-box {
-  appearance: none !important;
-  -moz-appearance: none !important;
-  background-color: rgba(249, 249, 250, 0.1) !important;
-  color: inherit !important;
-}
-
-/* add sidebar divider and give it background */
-
+/* Add outline border */
 #sidebar,
 #sidebar-header {
   background-color: inherit !important;
@@ -106,11 +141,8 @@
   border-inline-width: 1px 0px;
 }
 
-/* move statuspanel to the other side when sidebar is hovered so it doesn't get covered by sidebar */
-#sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel {
-  inset-inline: auto 0px !important;
-}
-#sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel-label {
-  margin-inline: 0px !important;
-  border-left-style: solid !important;
+/* --- SEARCH BAR --- */
+
+#sidebar-search-container {
+  background-color: #2b2a33 !important;
 }

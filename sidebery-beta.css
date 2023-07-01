@@ -1,0 +1,101 @@
+/* --- BASE (DARK THEME, I don't plan to support light theme) --- */
+
+#root_container {
+  background: #2b2a33 !important;
+}
+
+#root.root {
+  padding: 6px;
+  border-top-right-radius: 6px;
+  /* for sidebars placed to the right */
+  /* border-top-left-radius: 6px; */
+  --s-frame-bg: #1c1b22 !important;
+  --s-frame-fg: #fbfbfe !important;
+  --s-toolbar-bg: #2b2a33 !important;
+  --s-toolbar-fg: #fbfbfe !important;
+  --s-act-el-bg: #42414d !important;
+  --s-act-el-fg: #fbfbfe !important;
+  --s-popup-bg: #42414d !important;
+  --s-popup-fg: #fbfbfe !important;
+  --s-popup-border: #52525e !important;
+  --tabs-bg-hover: #3b3948 !important;
+  --tabs-activated-bg: #42414d !important;
+  --tabs-activated-fg: #fbfbfe !important;
+  --tabs-fg: #d4d4d4 !important;
+  --tabs-progress-bg: rgba(255, 255, 255, 0.086);
+  --tabs-lvl-opacity: 0.16;
+  --frame-el-bg: transparent !important;
+  --frame-bg: var(--s-frame-bg, #282828) !important;
+  --frame-fg: var(--s-frame-fg, #ccc) !important;
+  --frame-el-overlay-hover-bg: rgba(255, 255, 255, 0.086) !important;
+  --frame-el-overlay-clicked-bg: rgba(255, 255, 255, 0.141) !important;
+  --frame-el-overlay-selected-bg: rgba(255, 255, 255, 0.141) !important;
+  --frame-scrollbar-color: rgba(255, 255, 255, 0.275) !important;
+  --active-el-bg: var(--s-act-el-bg, rgba(255, 255, 255, 0.141)) !important;
+  --active-el-fg: var(--s-act-el-fg, #fff);
+}
+
+/* --- NAV BAR --- */
+
+#nav_bar {
+  background-color: var(--s-frame-bg);
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+
+#nav_bar .audio {
+  display: none;
+}
+
+.NavigationBar .main-items {
+  margin-left: 2px;
+}
+
+.NavigationBar .static-btns {
+  margin-right: 2px;
+}
+
+/* --- TABS --- */
+
+#root.root {
+  --tabs-height: 35px;
+  --tabs-width: 35px;
+  --tabs-pinned-height: var(--tabs-height);
+  --tabs-pinned-width: var(--tabs-width);
+  --tabs-indent: 16px;
+}
+
+.Tab {
+  width: calc(100% - var(--tabs-margin) * 2);
+}
+
+.Tab .close:hover {
+  background: transparent !important;
+}
+
+.Tab .close > svg:hover {
+  border-radius: 50px;
+  background: #d10032;
+  opacity: 100%;
+}
+
+.Tab .audio {
+  background: transparent !important;
+}
+
+.new-tab-btn {
+  margin-top: 1px;
+}
+
+/* --- IMPROVEMENTS --- */
+
+.transition-box {
+  --tabs-lvl-opacity: 0.1;
+}
+
+.popup {
+  max-width: 95%;
+  margin: 35px 0 0 -10px;
+}
+
+/* I'll add more things as I test them */
