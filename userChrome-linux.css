@@ -1,6 +1,12 @@
 /* --- TAB AND TITLE BAR --- */
 
-/* Hide native tabs and title bar */
+:root {
+  --sidebar-width: 267px;
+  --sidebar-background-color: #2b2a33;
+  --sidebar-text-color: #fbfbfe;
+}
+
+/* hide native tabs and title bar */
 #TabsToolbar {
   visibility: collapse !important;
   height: 0 !important;
@@ -13,7 +19,7 @@
 }
 
 .tabbrowser-tab[visuallyselected="true"] {
-  visibility: collapse;
+  visibility: collvariables apse;
   height: 0px;
 }
 
@@ -26,7 +32,7 @@
 
 #sidebar-header {
   /* uncomment to hide the sidebar header */
-  /* display: none !important; */
+  display: none !important;
   border-bottom: none !important;
   border: none !important;
 }
@@ -34,7 +40,6 @@
 #sidebar-box {
   margin-top: -1px;
   position: relative;
-  --sidebar-width: 267px;
   --sidebar-background-color: #2b2a33 !important;
   --sidebar-text-color: #fbfbfe !important;
   min-width: var(--sidebar-width) !important;
@@ -92,7 +97,7 @@
 .sidebar-placesTree {
   border-top-left-radius: 6px;
   background: #1c1b22 !important;
-  color: #d4d4d4;
+  color: #aaaaaa !important;
 }
 
 /* for sidebars placed to the right */
@@ -113,7 +118,6 @@
 
 #sidebar-close {
   opacity: 0;
-  transform: scale(0.9);
 }
 
 #sidebar-close:hover {
@@ -128,17 +132,24 @@
   display: none;
 }
 
-/* Add outline border */
+/* add outline border */
 #sidebar,
 #sidebar-header {
   background-color: inherit !important;
-  border-inline: 1px solid #2b2a33;
-  border-inline-width: 0px 1px;
+  border-inline: 4px solid #2b2a33;
+  border-inline-width: 0px 4px;
 }
 
 #sidebar-box:not([positionend]) > :-moz-locale-dir(rtl),
 #sidebar-box[positionend] > * {
-  border-inline-width: 1px 0px;
+  border-inline-width: 4px 0px;
+}
+
+/* hide on fullscreen */
+#main-window[sizemode="fullscreen"] #sidebar-box {
+  /* match the transition from the toolbar; swap to margin-right if you use the sidebar to the right */
+  /* transition: .8s margin-left ease-out !important; */
+  margin-left: -267px !important; /* modify the size if you use a custom one */
 }
 
 /* --- SEARCH BAR --- */

@@ -5,7 +5,6 @@
 }
 
 #root.root {
-  padding: 6px;
   border-top-right-radius: 6px;
   /* for sidebars placed to the right */
   /* border-top-left-radius: 6px; */
@@ -18,12 +17,6 @@
   --s-popup-bg: #42414d !important;
   --s-popup-fg: #fbfbfe !important;
   --s-popup-border: #52525e !important;
-  --tabs-bg-hover: #3b3948 !important;
-  --tabs-activated-bg: #42414d !important;
-  --tabs-activated-fg: #fbfbfe !important;
-  --tabs-fg: #d4d4d4 !important;
-  --tabs-progress-bg: rgba(255, 255, 255, 0.086);
-  --tabs-lvl-opacity: 0.16;
   --frame-el-bg: transparent !important;
   --frame-bg: var(--s-frame-bg, #282828) !important;
   --frame-fg: var(--s-frame-fg, #ccc) !important;
@@ -40,7 +33,7 @@
 #nav_bar {
   background-color: var(--s-frame-bg);
   border-radius: 3px;
-  margin-bottom: 4px;
+  padding: 2px 0;
 }
 
 #nav_bar .audio {
@@ -55,6 +48,19 @@
   margin-right: 2px;
 }
 
+.NavigationBar .nav-item:hover,
+.NavigationBar .dnd-layer:hover {
+  background-color: #44434e !important;
+}
+
+.NavigationBar .nav-item[data-active="true"] {
+  background: #51515c !important;
+}
+
+.NavigationBar .static-btns #settings .icon {
+  transform: scale(1.1);
+}
+
 /* --- TABS --- */
 
 #root.root {
@@ -63,6 +69,11 @@
   --tabs-pinned-height: var(--tabs-height);
   --tabs-pinned-width: var(--tabs-width);
   --tabs-indent: 16px;
+  --tabs-bg-hover: #44434e !important;
+  --tabs-activated-bg: #51515c !important;
+  --tabs-activated-fg: #fbfbfe !important;
+  --tabs-fg: #d4d4d4 !important;
+  --tabs-progress-bg: rgba(255, 255, 255, 0.086);
 }
 
 .Tab {
@@ -74,6 +85,7 @@
 }
 
 .Tab .close > svg:hover {
+  /* Styling the tab close button */
   border-radius: 50px;
   background: #d10032;
   opacity: 100%;
@@ -89,13 +101,16 @@
 
 /* --- IMPROVEMENTS --- */
 
+.ScrollBox {
+  padding: 6px;
+}
+
 .transition-box {
   --tabs-lvl-opacity: 0.1;
 }
 
 .popup {
   max-width: 95%;
-  margin: 35px 0 0 -10px;
 }
 
 /* I'll add more things as I test them */
