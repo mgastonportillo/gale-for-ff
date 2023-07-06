@@ -1,0 +1,8 @@
+:root[privatebrowsingmode="temporary"] {
+	
+	--focus-outline-color: rgb(172, 112, 255) !important;
+	--toolbar-field-focus-border-color: rgb(172, 112, 255) !important;
+	--lwt-selected-tab-background-color: rgb(60, 31, 123) !important;
+
+	--avatar-image-url: url("chrome://global/skin/icons/indicator-private-browsing.svg") !important;
+}

@@ -1,0 +1,79 @@
+/* Force default dark theme */
+
+:root {
+	--gg-black: rgb(28, 27, 34); /* #1c1b22 */
+	--gg-bg: rgb(43, 42, 51); /* #2b2a33 */
+	--gg-fg: rgb(251, 251, 254); /* #fbfbfe */
+	
+	--button-bgcolor: rgb(43, 42, 51) !important;
+	--button-hover-bgcolor: rgb(82, 82, 94) !important;
+	--button-active-bgcolor: rgb(91, 91, 102) !important;
+	--button-primary-bgcolor: rgb(0, 221, 255) !important;
+	--button-primary-hover-bgcolor: rgb(128, 235, 255) !important;
+	--button-primary-active-bgcolor: rgb(170, 242, 255) !important;
+	--button-primary-color: rgb(43, 42, 51) !important;
+	--input-bgcolor: rgb(66, 65, 77) !important;
+	--input-color: rgb(251, 251, 254) !important;
+	--input-border-color: rgb(143, 143, 157) !important;
+	--autocomplete-popup-separator-color: rgb(82, 82, 94) !important;
+	--panel-banner-item-update-supported-bgcolor: rgb(84, 255, 189) !important;
+	--panel-banner-item-info-icon-bgcolor: rgb(128, 235, 255) !important;
+	--tab-icon-overlay-stroke: rgb(66, 65, 77) !important;
+	--tab-icon-overlay-fill: rgb(251, 251, 254) !important;
+	--panel-item-hover-bgcolor: color-mix(in srgb, currentColor 9%, transparent) !important;
+	--arrowpanel-dimmed-further: color-mix(in srgb, currentColor 14%, transparent) !important;
+	--panel-item-active-bgcolor: color-mix(in srgb, currentColor 25%, transparent) !important;
+	--urlbar-icon-fill-opacity: 1 !important;
+	--panel-separator-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%) !important;
+	--lwt-accent-color: rgb(28, 27, 34) !important;
+	--lwt-text-color: rgba(251, 251, 254) !important;
+	--arrowpanel-background: rgb(66, 65, 77) !important;
+	--arrowpanel-color: rgb(251, 251, 254) !important;
+	--arrowpanel-border-color: rgb(82, 82, 94) !important;
+	--toolbar-field-background-color: rgb(28, 27, 34) !important;
+	--toolbar-field-color: rgb(251, 251, 254) !important;
+	--toolbar-field-border-color: rgba(0, 0, 0, 0) !important;
+	--toolbar-field-focus-background-color: rgba(66, 65, 77, 1) !important;
+	--toolbar-field-focus-color: rgb(251, 251, 254) !important;
+	--lwt-tab-text: rgb(251, 251, 254) !important;
+	--toolbar-bgcolor: rgb(43, 42, 51) !important;
+	--toolbar-color: rgb(251, 251, 254) !important;
+	--chrome-content-separator-color: rgb(12, 12, 13) !important;
+	--toolbarbutton-icon-fill: rgb(251, 251, 254) !important;
+	--lwt-selected-tab-background-color: rgb(66, 65, 77) !important;
+	--autocomplete-popup-highlight-background: rgb(43, 42, 51) !important;
+	--tabpanel-background-color: rgb(43, 42, 51) !important;
+	--sidebar-background-color: var(--gg-bg) !important;
+  --sidebar-text-color: var(--gg-fg) !important;
+}
+
+.content-header {
+  background: var(--gg-bg) !important;
+}
+
+.content-scrollable {
+  background: var(--gg-black) !important;
+}
+
+#sidebar,
+#sidebar-header {
+  background-color: var(--gg-bg) !important;
+  border-inline: 4px solid var(--gg-bg);
+}
+
+.sidebar-panel {
+	background: var(--gg-bg) !important;
+}
+
+.sidebar-placesTree {
+  background: var(--gg-black) !important;
+  color: #d4d4d4 !important;
+}
+
+.sidebar-placesTree:before {
+  background: var(--gg-bg);
+}
+
+.sidebar-panel[lwt-sidebar] {
+	background: var(--gg-bg);
+}

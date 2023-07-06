@@ -1,37 +1,20 @@
-/* --- TAB AND TITLE BAR --- */
+@import url("darkTheme.css");
+@import url("privTheme.css");
 
 :root {
-  --sidebar-width: 267px;
-  --sidebar-background-color: #2b2a33;
-  --sidebar-text-color: #fbfbfe;
+	--sidebar-width: 267px;
 }
 
-/* hide native tabs and title bar */
+/* --- TAB AND TITLE BAR --- */
+
 #TabsToolbar {
-  visibility: collapse !important;
+  display: none !important;
   height: 0 !important;
-}
-
-/* mini patch to hide native tabs correctly */
-.tabbrowser-tab {
-  visibility: collapse;
-  height: 0px;
-}
-
-.tabbrowser-tab[visuallyselected="true"] {
-  visibility: collvariables apse;
-  height: 0px;
-}
-
-.tab[selected="true"] {
-  visibility: collapse;
-  height: 0px;
 }
 
 /* --- SIDEBAR --- */
 
 #sidebar-header {
-  /* uncomment to hide the sidebar header */
   display: none !important;
   border-bottom: none !important;
   border: none !important;
@@ -40,8 +23,6 @@
 #sidebar-box {
   margin-top: -1px;
   position: relative;
-  --sidebar-background-color: #2b2a33 !important;
-  --sidebar-text-color: #fbfbfe !important;
   min-width: var(--sidebar-width) !important;
   width: var(--sidebar-width) !important;
   max-width: var(--sidebar-width) !important;
@@ -51,6 +32,7 @@
 #sidebar-box[positionend] {
   direction: rtl;
 }
+
 #sidebar-box[positionend] > * {
   direction: ltr;
 }
@@ -63,30 +45,15 @@
   direction: rtl;
 }
 
-.content-header {
-  background: #2b2a33 !important;
-}
-
-.content-scrollable {
-  background: #1c1b22 !important;
-}
-
 #sidebar-icon {
   filter: contrast(150%);
   opacity: 1;
-}
-
-.sidebar-placesTree {
-  border-top-right-radius: 6px;
-  background: #1c1b22 !important;
-  color: #d4d4d4;
 }
 
 /* for sidebars placed to the left (default) */
 .sidebar-placesTree:before {
   content: "";
   z-index: -1;
-  background: #2b2a33 !important;
   position: absolute;
   height: 10px;
   width: 10px;
@@ -95,22 +62,24 @@
 }
 
 .sidebar-placesTree {
-  border-top-left-radius: 6px;
-  background: #1c1b22 !important;
-  color: #aaaaaa !important;
+  border-top-right-radius: 6px;
 }
 
 /* for sidebars placed to the right */
 /* .sidebar-placesTree:before {
   content: "";
   z-index: -1;
-  background: #2b2a33 !important;
   position: absolute;
   height: 10px;
   width: 10px;
   top: 45px;
   left: 0;
-} */
+}
+
+.sidebar-placesTree {
+  border-top-left-radius: 6px;
+}
+*/
 
 #sidebar-title {
   font-size: 1.1rem;
@@ -132,11 +101,9 @@
   display: none;
 }
 
-/* add outline border */
+/* Add outline border */
 #sidebar,
 #sidebar-header {
-  background-color: inherit !important;
-  border-inline: 4px solid #2b2a33;
   border-inline-width: 0px 4px;
 }
 
@@ -145,15 +112,15 @@
   border-inline-width: 4px 0px;
 }
 
+#appcontent {
+	margin-top: -1px;
+}
+
 /* hide on fullscreen */
 #main-window[sizemode="fullscreen"] #sidebar-box {
-  /* match the transition from the toolbar; swap to margin-right if you use the sidebar to the right */
-  /* transition: .8s margin-left ease-out !important; */
-  margin-left: -267px !important; /* modify the size if you use a custom one */
+  /* match the transition from the toolbar; swap to margin-right if you use the sidebar to the right
+  transition: .8s margin-left ease-out !important; */
+  /* modify the size if you use a custom one */
+  margin-left: -267px !important;
 }
 
-/* --- SEARCH BAR --- */
-
-#sidebar-search-container {
-  background-color: #2b2a33 !important;
-}
