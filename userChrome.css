@@ -1,0 +1,131 @@
+@import url("darkTheme.css");
+@import url("private.css");
+
+:root {
+	--sidebar-width: 267px;
+}
+
+/* --- TAB AND TITLE BAR --- */
+
+#TabsToolbar {
+  display: none !important;
+  height: 0 !important;
+}
+
+/* --- SIDEBAR --- */
+
+#sidebar-header {
+  display: none !important;
+  border-bottom: none !important;
+  border: none !important;
+}
+
+#sidebar-box {
+  margin-top: -1px;
+  position: relative;
+  min-width: var(--sidebar-width) !important;
+  width: var(--sidebar-width) !important;
+  max-width: var(--sidebar-width) !important;
+  z-index: 1;
+}
+
+#sidebar-box[positionend] {
+  direction: rtl;
+}
+
+#sidebar-box[positionend] > * {
+  direction: ltr;
+}
+
+#sidebar-box[positionend]:-moz-locale-dir(rtl) {
+  direction: ltr;
+}
+
+#sidebar-box[positionend]:-moz-locale-dir(rtl) > * {
+  direction: rtl;
+}
+
+#sidebar-icon {
+  filter: contrast(150%);
+  opacity: 1;
+}
+
+/* for sidebars placed to the left (default) */
+.sidebar-placesTree:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 45px;
+  right: 0;
+}
+
+.sidebar-placesTree {
+  border-top-right-radius: 6px;
+}
+
+/* for sidebars placed to the right */
+/* .sidebar-placesTree:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 45px;
+  left: 0;
+}
+
+.sidebar-placesTree {
+  border-top-left-radius: 6px;
+}
+*/
+
+#sidebar-title {
+  font-size: 1.1rem;
+}
+
+#sidebar-close {
+  opacity: 0;
+}
+
+#sidebar-close:hover {
+  opacity: 1;
+}
+
+#historyTree .sidebar-placesTreechildren {
+  margin-left: -8px;
+}
+
+#sidebar-splitter {
+  display: none;
+}
+
+/* Add outline border */
+#sidebar,
+#sidebar-header {
+  border-inline-width: 0px 4px;
+}
+
+#sidebar-box:not([positionend]) > :-moz-locale-dir(rtl),
+#sidebar-box[positionend] > * {
+  border-inline-width: 4px 0px;
+}
+
+#appcontent {
+	margin-top: -1px;
+}
+
+/* hide on fullscreen */
+#main-window[sizemode="fullscreen"] #sidebar-box {
+  /* match the transition from the toolbar; swap to margin-right if you use the sidebar to the right
+  transition: .8s margin-left ease-out !important; */
+  /* modify the size if you use a custom one */
+  margin-left: -267px !important;
+}
+
+#search-box {
+	appearance: none !important;
+	border-radius: 5px !important;
+	line-height: 1.8rem !important;
+}

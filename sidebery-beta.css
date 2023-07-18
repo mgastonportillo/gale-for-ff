@@ -1,51 +1,44 @@
 /* --- BASE (DARK THEME, I don't plan to support light theme) --- */
 
-#root_container {
-  background: #2b2a33 !important;
+#root.root {
+	--s-frame-bg: #1c1b22 !important;
+	--s-frame-fg: #fbfbfe !important;
+	--s-toolbar-bg: #2b2a33 !important;
+	--s-toolbar-fg: #fbfbfe !important;
+	--s-act-el-bg: #42414d !important;
+	--s-act-el-fg: #fbfbfe !important;
+	--s-popup-bg: #42414d !important;
+	--s-popup-fg: #fbfbfe !important;
+	--s-popup-border: #52525e !important;
+	--frame-el-bg: transparent !important;
+	--frame-bg: var(--s-frame-bg, #282828) !important;
+	--frame-fg: var(--s-frame-fg, #ccc) !important;
+	--frame-el-overlay-hover-bg: rgba(255,255,255,0.086) !important;
+	--frame-el-overlay-clicked-bg: rgba(255,255,255,0.141) !important;
+	--frame-el-overlay-selected-bg: rgba(255,255,255,0.141) !important;
+	--frame-scrollbar-color: rgba(255,255,255,0.275) !important;
+	--active-el-bg: var(--s-act-el-bg, rgba(255,255,255,0.141)) !important;
+	--active-el-fg: var(--s-act-el-fg, #fff);
+	background: var(--s-toolbar-bg);
 }
 
-#root.root {
-  border-top-right-radius: 6px;
-  /* for sidebars placed to the right */
-  /* border-top-left-radius: 6px; */
-  --s-frame-bg: #1c1b22 !important;
-  --s-frame-fg: #fbfbfe !important;
-  --s-toolbar-bg: #2b2a33 !important;
-  --s-toolbar-fg: #fbfbfe !important;
-  --s-act-el-bg: #42414d !important;
-  --s-act-el-fg: #fbfbfe !important;
-  --s-popup-bg: #42414d !important;
-  --s-popup-fg: #fbfbfe !important;
-  --s-popup-border: #52525e !important;
-  --frame-el-bg: transparent !important;
-  --frame-bg: var(--s-frame-bg, #282828) !important;
-  --frame-fg: var(--s-frame-fg, #ccc) !important;
-  --frame-el-overlay-hover-bg: rgba(255, 255, 255, 0.086) !important;
-  --frame-el-overlay-clicked-bg: rgba(255, 255, 255, 0.141) !important;
-  --frame-el-overlay-selected-bg: rgba(255, 255, 255, 0.141) !important;
-  --frame-scrollbar-color: rgba(255, 255, 255, 0.275) !important;
-  --active-el-bg: var(--s-act-el-bg, rgba(255, 255, 255, 0.141)) !important;
-  --active-el-fg: var(--s-act-el-fg, #fff);
-}
 
 /* --- NAV BAR --- */
 
 #nav_bar {
-  background-color: var(--s-frame-bg);
-  border-radius: 3px;
-  padding: 2px 0;
+	display: flex;
+	align-items: center;
+	background-color: var(--s-toolbar-bg);
+	padding: 0 6px;
+	height: 48px;
 }
 
 #nav_bar .audio {
-  display: none;
+	display: none;
 }
 
 .NavigationBar .main-items {
-  margin-left: 2px;
-}
-
-.NavigationBar .static-btns {
-  margin-right: 2px;
+	margin-left: 2px;
 }
 
 .NavigationBar .nav-item:hover,
@@ -54,63 +47,94 @@
 }
 
 .NavigationBar .nav-item[data-active="true"] {
-  background: #51515c !important;
+	background: #51515c !important;
+	box-shadow: none !important;
 }
 
-.NavigationBar .static-btns #settings .icon {
-  transform: scale(1.1);
+.NavigationBar .static-btns #settings {
+	display: none;
 }
+
 
 /* --- TABS --- */
 
 #root.root {
-  --tabs-height: 35px;
-  --tabs-width: 35px;
-  --tabs-pinned-height: var(--tabs-height);
-  --tabs-pinned-width: var(--tabs-width);
-  --tabs-indent: 16px;
-  --tabs-bg-hover: #44434e !important;
-  --tabs-activated-bg: #51515c !important;
-  --tabs-activated-fg: #fbfbfe !important;
-  --tabs-fg: #d4d4d4 !important;
-  --tabs-progress-bg: rgba(255, 255, 255, 0.086);
+	--tabs-height: 35px;
+	--tabs-width: 35px;
+	--tabs-pinned-height: var(--tabs-height);
+	--tabs-pinned-width: var(--tabs-width);
+	--tabs-indent: 16px;
+	--tabs-bg-hover: #44434e !important;
+	--tabs-activated-bg: #51515c !important;
+	--tabs-activated-fg: #fbfbfe !important;
+	--tabs-fg: #d4d4d4 !important;
+	--tabs-progress-bg: rgba(255,255,255,0.086);
+}
+
+.PinnedTabsBar {
+	padding-top: 2px !important;
+	background: transparent;
 }
 
 .Tab {
-  width: calc(100% - var(--tabs-margin) * 2);
+	width: calc(100% - var(--tabs-margin)*2);
 }
 
 .Tab .close:hover {
-  background: transparent !important;
+	background: transparent !important;
 }
 
 .Tab .close > svg:hover {
-  /* Styling the tab close button */
-  border-radius: 50px;
-  background: #d10032;
-  opacity: 100%;
+	/* Styling the tab close button */
+	border-radius: 50px;
+	background: #d10032;
+	opacity: 100%;
 }
 
 .Tab .audio {
-  background: transparent !important;
+	background: transparent !important;
 }
 
 .new-tab-btn {
-  margin-top: 1px;
+	margin-top: 1px;
 }
+
 
 /* --- IMPROVEMENTS --- */
 
+.TabsPanel .bottom-space,
+.TabsPanel .new-tab-btns {
+	background: none;
+}
+
+.SearchBar {
+	position: absolute;
+	left: 3px;
+	bottom: 40px;
+	border-top-right-radius: 6px;
+}
+
+.main-box {
+	background: var(--s-toolbar-bg);
+}
+
+.panel-box {
+	background: var(--s-frame-bg);
+	border-top-right-radius: 6px;
+}
+
 .ScrollBox {
-  padding: 6px;
+	margin-top: 2px;
+	padding: 0 3px;
 }
 
 .transition-box {
-  --tabs-lvl-opacity: 0.1;
+	--tabs-lvl-opacity: .1;
 }
 
 .popup {
-  max-width: 95%;
+	margin-top: 48px;
+	max-width: 97%;
 }
 
 /* I'll add more things as I test them */

@@ -1,48 +1,52 @@
 /* Force default dark theme */
 
 :root {
-	--gg-black: rgb(28, 27, 34); /* #1c1b22 */
 	--gg-bg: rgb(43, 42, 51); /* #2b2a33 */
 	--gg-fg: rgb(251, 251, 254); /* #fbfbfe */
+	--gg-fg-faded: rgb(153, 153, 157); /* #99999d (alt #8f8f9d) */
+	--gg-black: rgb(28, 27, 34); /* #1c1b22 */
+	--gg-grey: rgb(82, 82, 94); /* #52525e */
+	--gg-darkgrey: rgb(66, 65, 77); /* #42414d */
+	--gg-cyan: rgb(128, 235, 255); /* #80ebff */
 	
-	--button-bgcolor: rgb(43, 42, 51) !important;
-	--button-hover-bgcolor: rgb(82, 82, 94) !important;
+	--button-bgcolor: var(--gg-bg) !important;
+	--button-hover-bgcolor: var(--gg-grey) !important;
 	--button-active-bgcolor: rgb(91, 91, 102) !important;
 	--button-primary-bgcolor: rgb(0, 221, 255) !important;
-	--button-primary-hover-bgcolor: rgb(128, 235, 255) !important;
+	--button-primary-hover-bgcolor: var(--gg-cyan) !important;
 	--button-primary-active-bgcolor: rgb(170, 242, 255) !important;
-	--button-primary-color: rgb(43, 42, 51) !important;
-	--input-bgcolor: rgb(66, 65, 77) !important;
-	--input-color: rgb(251, 251, 254) !important;
-	--input-border-color: rgb(143, 143, 157) !important;
-	--autocomplete-popup-separator-color: rgb(82, 82, 94) !important;
+	--button-primary-color: var(--gg-bg) !important;
+	--input-bgcolor: var(--gg-darkgrey) !important;
+	--input-color: var(--gg-fg) !important;
+	--input-border-color: var(--gg-fg-faded) !important;
+	--autocomplete-popup-separator-color: var(--gg-grey) !important;
 	--panel-banner-item-update-supported-bgcolor: rgb(84, 255, 189) !important;
-	--panel-banner-item-info-icon-bgcolor: rgb(128, 235, 255) !important;
-	--tab-icon-overlay-stroke: rgb(66, 65, 77) !important;
-	--tab-icon-overlay-fill: rgb(251, 251, 254) !important;
+	--panel-banner-item-info-icon-bgcolor: var(--gg-cyan) !important;
+	--tab-icon-overlay-stroke: var(--gg-darkgrey) !important;
+	--tab-icon-overlay-fill: var(--gg-fg) !important;
 	--panel-item-hover-bgcolor: color-mix(in srgb, currentColor 9%, transparent) !important;
 	--arrowpanel-dimmed-further: color-mix(in srgb, currentColor 14%, transparent) !important;
 	--panel-item-active-bgcolor: color-mix(in srgb, currentColor 25%, transparent) !important;
 	--urlbar-icon-fill-opacity: 1 !important;
 	--panel-separator-zap-gradient: linear-gradient(90deg, #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%) !important;
-	--lwt-accent-color: rgb(28, 27, 34) !important;
-	--lwt-text-color: rgba(251, 251, 254) !important;
-	--arrowpanel-background: rgb(66, 65, 77) !important;
-	--arrowpanel-color: rgb(251, 251, 254) !important;
-	--arrowpanel-border-color: rgb(82, 82, 94) !important;
-	--toolbar-field-background-color: rgb(28, 27, 34) !important;
-	--toolbar-field-color: rgb(251, 251, 254) !important;
+	--lwt-accent-color: var(--gg-black) !important;
+	--lwt-text-color: var(--gg-fg) !important;
+	--arrowpanel-background: var(--gg-darkgrey) !important;
+	--arrowpanel-color: var(--gg-fg) !important;
+	--arrowpanel-border-color: var(--gg-grey) !important;
+	--toolbar-field-background-color: var(--gg-black) !important;
+	--toolbar-field-color: var(--gg-fg) !important;
 	--toolbar-field-border-color: rgba(0, 0, 0, 0) !important;
-	--toolbar-field-focus-background-color: rgba(66, 65, 77, 1) !important;
-	--toolbar-field-focus-color: rgb(251, 251, 254) !important;
-	--lwt-tab-text: rgb(251, 251, 254) !important;
-	--toolbar-bgcolor: rgb(43, 42, 51) !important;
-	--toolbar-color: rgb(251, 251, 254) !important;
+	--toolbar-field-focus-background-color: var(--gg-darkgrey) !important;
+	--toolbar-field-focus-color: var(--gg-fg) !important;
+	--lwt-tab-text: var(--gg-fg) !important;
+	--toolbar-bgcolor: var(--gg-bg) !important;
+	--toolbar-color: var(--gg-fg) !important;
 	--chrome-content-separator-color: rgb(12, 12, 13) !important;
-	--toolbarbutton-icon-fill: rgb(251, 251, 254) !important;
-	--lwt-selected-tab-background-color: rgb(66, 65, 77) !important;
-	--autocomplete-popup-highlight-background: rgb(43, 42, 51) !important;
-	--tabpanel-background-color: rgb(43, 42, 51) !important;
+	--toolbarbutton-icon-fill: var(--gg-fg) !important;
+	--lwt-selected-tab-background-color: var(--gg-darkgrey) !important;
+	--autocomplete-popup-highlight-background: var(--gg-bg) !important;
+	--tabpanel-background-color: var(--gg-bg) !important;
 	--sidebar-background-color: var(--gg-bg) !important;
   --sidebar-text-color: var(--gg-fg) !important;
 }
@@ -76,4 +80,9 @@
 
 .sidebar-panel[lwt-sidebar] {
 	background: var(--gg-bg);
+}
+
+#search-box {
+	background: var(--gg-black) !important;
+	color: var() !important;
 }
