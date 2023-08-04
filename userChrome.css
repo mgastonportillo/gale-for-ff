@@ -1,15 +1,19 @@
 @import url("darkTheme.css");
 @import url("private.css");
 
-:root {
-	--sidebar-width: 267px;
-}
-
 /* --- TAB AND TITLE BAR --- */
 
 #TabsToolbar {
   display: none !important;
   height: 0 !important;
+}
+
+.content-header {
+  background: var(--gg-bg) !important;
+}
+
+.content-scrollable {
+  background: var(--gg-black) !important;
 }
 
 /* --- SIDEBAR --- */
@@ -18,14 +22,13 @@
   display: none !important;
   border-bottom: none !important;
   border: none !important;
+  background-color: var(--gg-bg) !important;
+  border-inline-color: var(--gg-bg);
 }
 
 #sidebar-box {
   margin-top: -1px;
   position: relative;
-  min-width: var(--sidebar-width) !important;
-  width: var(--sidebar-width) !important;
-  max-width: var(--sidebar-width) !important;
   z-index: 1;
 }
 
@@ -45,12 +48,26 @@
   direction: rtl;
 }
 
+.sidebar-panel {
+  background: var(--gg-bg) !important;
+}
+
+.sidebar-panel[lwt-sidebar] {
+  background: var(--gg-bg);
+}
+
 #sidebar-icon {
   filter: contrast(150%);
   opacity: 1;
 }
 
 /* for sidebars placed to the left (default) */
+.sidebar-placesTree {
+  border-top-right-radius: 6px;
+  background: var(--gg-black) !important;
+  color: #d4d4d4 !important;
+}
+
 .sidebar-placesTree:before {
   content: "";
   z-index: -1;
@@ -59,25 +76,25 @@
   width: 10px;
   top: 45px;
   right: 0;
-}
-
-.sidebar-placesTree {
-  border-top-right-radius: 6px;
+  background: var(--gg-bg);
 }
 
 /* for sidebars placed to the right */
-/* .sidebar-placesTree:before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  height: 10px;
-  width: 10px;
-  top: 45px;
-  left: 0;
+/*
+.sidebar-placesTree {
+	border-top-left-radius: 6px;
+	background: var(--gg-black) !important;
+	color: #d4d4d4 !important;
 }
 
-.sidebar-placesTree {
-  border-top-left-radius: 6px;
+.sidebar-placesTree:before {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	height: 10px;
+	width: 10px;
+	top: 45px;
+	left: 0;
 }
 */
 
@@ -98,7 +115,8 @@
 }
 
 #sidebar-splitter {
-  display: none;
+  width: 0px !important;
+  border: 2px solid var(--gg-bg) !important;
 }
 
 /* Add outline border */
@@ -113,19 +131,22 @@
 }
 
 #appcontent {
-	margin-top: -1px;
+  margin-top: -1px;
 }
 
 /* hide on fullscreen */
-#main-window[sizemode="fullscreen"] #sidebar-box {
+#main-window[sizemode="fullscreen"] #sidebar-box,
+#main-window[sizemode="fullscreen"] #sidebar-splitter {
   /* match the transition from the toolbar; swap to margin-right if you use the sidebar to the right
-  transition: .8s margin-left ease-out !important; */
+	transition: .8s margin-left ease-out !important; */
   /* modify the size if you use a custom one */
-  margin-left: -267px !important;
+  display: none !important;
 }
 
 #search-box {
-	appearance: none !important;
-	border-radius: 5px !important;
-	line-height: 1.8rem !important;
+  appearance: none !important;
+  border-radius: 5px !important;
+  line-height: 1.8rem !important;
+  background: var(--gg-black) !important;
+  color: var() !important;
 }
