@@ -32,7 +32,7 @@ to maintaining this theme actively.
 <li> In Firefox, go to <code>about:config</code> and set <code>toolkit.legacyUserProfileCustomizations.stylesheets</code> to <code>True</code></li>
 <li> Make sure you have the <a href="https://www.userchrome.org/how-create-userchrome-css.html">chrome folder</a> within your firefox profile</li>
 <li> Get <a href="https://github.com/mbnuqw/sidebery/">Sidebery v5 (beta)</a> if you don't have it already installed</li>
-<li> Copy <code>userChrome.css</code>, <code>darkTheme.css</code> and <code>privTheme.css</code> to the chrome folder</li>
+<li> Copy <code>userChrome.css</code>, <code>darkTheme.css</code> and <code>private.css</code> to the chrome folder</li>
 <li> Go to Sidebery settings and paste the content of my <code>sidebery.css</code> file into <i>Styles editor > Sidebar</i> </li>
 <li> Enjoy your new setup!</li>
 </ol>
