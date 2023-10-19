@@ -70,7 +70,7 @@
 }
 
 .PinnedTabsBar {
-  padding-top: 2px !important;
+  padding: 2px var(--tabs-margin) var(--tabs-margin) 3px !important;
   background: transparent;
 }
 
@@ -105,7 +105,8 @@
 
 .TabsPanel .bottom-space,
 .TabsPanel .new-tab-btns {
-  background: none;
+  background: var(--s-frame-bg);
+  padding: 2px 7px 2px 2px;
 }
 
 .SearchBar {
@@ -138,4 +139,3 @@
   max-width: 97%;
 }
 
-/* I'll add more things as I test them */
