@@ -1,81 +1,36 @@
-/* --- BASE (DARK THEME, I don't plan to support light theme) --- */
-
 #root.root {
   --s-frame-bg: #1c1b22 !important;
-  --s-frame-fg: #fbfbfe !important;
   --s-toolbar-bg: #2b2a33 !important;
-  --s-toolbar-fg: #fbfbfe !important;
-  --s-act-el-bg: #42414d !important;
-  --s-act-el-fg: #fbfbfe !important;
-  --s-popup-bg: #42414d !important;
-  --s-popup-fg: #fbfbfe !important;
-  --s-popup-border: #52525e !important;
-  --frame-el-bg: transparent !important;
-  --frame-bg: var(--s-frame-bg, #282828) !important;
-  --frame-fg: var(--s-frame-fg, #ccc) !important;
-  --frame-el-overlay-hover-bg: rgba(255, 255, 255, 0.086) !important;
-  --frame-el-overlay-clicked-bg: rgba(255, 255, 255, 0.141) !important;
-  --frame-el-overlay-selected-bg: rgba(255, 255, 255, 0.141) !important;
-  --frame-scrollbar-color: rgba(255, 255, 255, 0.275) !important;
-  --active-el-bg: var(--s-act-el-bg, rgba(255, 255, 255, 0.141)) !important;
-  --active-el-fg: var(--s-act-el-fg, #fff);
-  background: var(--s-toolbar-bg);
+  /* --s-frame-fg: #fbfbfe !important;
+	--s-toolbar-fg: #fbfbfe !important; */
 }
 
 /* --- NAV BAR --- */
 
 #nav_bar {
+  margin-bottom: -2px;
   display: flex;
   align-items: center;
-  background-color: var(--s-toolbar-bg);
   padding: 0 6px;
   height: 48px;
 }
 
-#nav_bar .audio {
-  display: none;
-}
+/* --- PINNED TABS --- */
 
-.NavigationBar .main-items {
-  margin-left: 2px;
-}
-
-.NavigationBar .nav-item:hover,
-.NavigationBar .dnd-layer:hover {
-  background-color: #44434e !important;
-}
-
-.NavigationBar .nav-item[data-active="true"] {
-  background: #51515c !important;
-  box-shadow: none !important;
-}
-
-.NavigationBar .static-btns #settings {
-  display: none;
+.PinnedTabsBar {
+  padding: 2px var(--tabs-margin) var(--tabs-margin) var(--tabs-margin) !important;
+  background: transparent;
 }
 
 /* --- TABS --- */
 
 #root.root {
+  --tabs-margin: 6px;
   --tabs-height: 35px;
   --tabs-width: 35px;
   --tabs-pinned-height: var(--tabs-height);
   --tabs-pinned-width: var(--tabs-width);
   --tabs-indent: 16px;
-  --tabs-bg-hover: #44434e !important;
-  --tabs-activated-bg: #51515c !important;
-  --tabs-activated-fg: #fbfbfe !important;
-  --tabs-fg: #d4d4d4 !important;
-  --tabs-progress-bg: rgba(255, 255, 255, 0.086);
-}
-
-.PinnedTabsBar {
-  padding: 2px var(--tabs-margin) var(--tabs-margin) 3px !important;
-  background: transparent;
-}
-
-.Tab {
-  width: calc(100% - var(--tabs-margin) * 2);
 }
 
 .Tab .close:hover {
@@ -89,53 +44,31 @@
   opacity: 100%;
 }
 
-.Tab .audio {
-  background: transparent !important;
-}
-
-.new-tab-btn {
-  margin-top: 1px;
-}
-
 /* --- IMPROVEMENTS --- */
 
 .TabsPanel {
-  margin: 2px 0;
+  margin: 5px 0;
 }
 
-.TabsPanel .bottom-space,
-.TabsPanel .new-tab-btns {
+.central-box {
+  z-index: 1;
   background: var(--s-frame-bg);
-  padding: 2px 7px 2px 2px;
+  border-top-right-radius: 6px;
 }
 
-.SearchBar {
+.main-box:after {
   position: absolute;
-  left: 3px;
-  bottom: 40px;
-  border-top-right-radius: 6px;
-}
-
-.main-box {
+  z-index: 0;
+  top: -5px;
+  right: -5px;
+  content: "";
   background: var(--s-toolbar-bg);
-}
-
-.panel-box {
-  background: var(--s-frame-bg);
-  border-top-right-radius: 6px;
-}
-
-.ScrollBox {
-  margin-top: 2px;
-  padding: 0 3px;
-}
-
-.transition-box {
-  --tabs-lvl-opacity: 0.1;
+  height: 10px;
+  width: 10px;
 }
 
 .popup {
-  margin-top: 48px;
+  margin-top: 50px;
   max-width: 97%;
 }
 
