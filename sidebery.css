@@ -1,8 +1,8 @@
 #root.root {
   --s-frame-bg: #1c1b22 !important;
   --s-toolbar-bg: #2b2a33 !important;
-  /* --s-frame-fg: #fbfbfe !important;
-	--s-toolbar-fg: #fbfbfe !important; */
+  /*  --s-frame-fg: #fbfbfe !important; */
+  /* --s-toolbar-fg: #fbfbfe !important; */
 }
 
 /* --- NAV BAR --- */
@@ -44,11 +44,16 @@
   opacity: 100%;
 }
 
-/* --- IMPROVEMENTS --- */
-
 .TabsPanel {
   margin: 5px 0;
 }
+
+.TabsPanel .new-tab-btn {
+  height: var(--tabs-height);
+  margin: 0 4px;
+}
+
+/* --- IMPROVEMENTS --- */
 
 .central-box {
   z-index: 1;
