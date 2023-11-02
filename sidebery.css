@@ -1,8 +1,8 @@
 #root.root {
   --s-frame-bg: #1c1b22 !important;
   --s-toolbar-bg: #2b2a33 !important;
-  /*  --s-frame-fg: #fbfbfe !important; */
-  /* --s-toolbar-fg: #fbfbfe !important; */
+  /* --s-frame-fg: #fbfbfe !important;
+	--s-toolbar-fg: #fbfbfe !important; */
 }
 
 /* --- NAV BAR --- */
@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   padding: 0 6px;
-  height: 48px;
+  height: 50px;
 }
 
 /* --- PINNED TABS --- */
@@ -44,10 +44,6 @@
   opacity: 100%;
 }
 
-.TabsPanel {
-  margin: 5px 0;
-}
-
 .TabsPanel .new-tab-btn {
   height: var(--tabs-height);
   margin: 0 4px;
@@ -55,22 +51,34 @@
 
 /* --- IMPROVEMENTS --- */
 
+.TabsPanel {
+  margin: 5px 0;
+}
+
 .central-box {
   z-index: 1;
   background: var(--s-frame-bg);
   border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .main-box:after {
   position: absolute;
   z-index: 0;
   top: -5px;
+  left: auto;
   right: -5px;
   content: "";
-  background: var(--s-toolbar-bg);
+  background: #2b2a33;
   height: 10px;
   width: 10px;
 }
+
+/* Uncomment if you place your sidebar to the right */
+/* .main-box:after {
+	right: auto;
+	left: -5px;
+} */
 
 .popup {
   margin-top: 50px;

@@ -28,29 +28,23 @@ to maintaining this theme actively.
 
 ### How to install?
 
-<ol>
-<li> In Firefox, go to <code>about:config</code> and set <code>toolkit.legacyUserProfileCustomizations.stylesheets</code> to <code>True</code></li>
-<li> Make sure you have the <a href="https://www.userchrome.org/how-create-userchrome-css.html">chrome folder</a> within your firefox profile</li>
-<li> Get <a href="https://github.com/mbnuqw/sidebery/">Sidebery v5 (beta)</a> if you don't have it already installed</li>
-<li> Copy <code>userChrome.css</code>, <code>darkTheme.css</code> and <code>private.css</code> to the chrome folder</li>
-<li> Go to Sidebery settings and paste the content of my <code>sidebery.css</code> file into <i>Styles editor > Sidebar</i> </li>
-<li> Enjoy your new setup!</li>
-</ol>
-<hr>
+1. In Firefox, go to `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets` to `True`. Make sure you have the <a href="https://www.userchrome.org/how-create-userchrome-css.html">chrome folder</a> within your Firefox profile
+2. Get <a href="https://github.com/mbnuqw/sidebery/">Sidebery v5 (beta)</a> if you don't have it already installed
+3. Copy `userChrome.css`, `darkTheme.css` and `private.css` to the chrome folder
+4. Go to Sidebery settings and paste the content of my `sidebery.css` file into _Styles editor > Sidebar_
+5. Enjoy your new setup!<hr>
 
 ### Known bugs
 
-<ul>
-<li>In Sidebery beta, autoshrink triggers when you're moving a tab even though the mouse is still hovering the panel. I decided to disable that characteristic until I find a workaround.</li>
-<li><span style="text-decoration: line-through;">When moving a tab, the tab position indicator doesn't follow the <code>margin-top</code> CSS rule for tabs; if it bothers you a lot, identify <code>.Tab {margin-top: 5px;</code> and remove it.</span><b><i>&nbsp;&nbsp;Fixed!</i></b></li>
-</ul>
+- In Sidebery beta, autoshrink triggers when you're moving a tab even though the mouse is still hovering the panel. I decided to disable that characteristic until I find a workaround.
+- ~~When moving a tab, the tab position indicator doesn't follow the `margin-top` CSS rule for tabs~~  **_Fixed!_**
+
 <hr>
 
 ### Credits
 
-<ul>
-<li>to <a href="https://github.com/MrOtherGuy">@MrOtherGuy</a> for his <a href="https://github.com/MrOtherGuy/firefox-csshacks">Firefox CSS Hacks</a></li>
-<li>to <a href="https://www.reddit.com/user/captainkaba/">u/captainkaba</a> for his <a href="https://www.reddit.com/r/FirefoxCSS/comments/rqo5z6/some_people_asked_for_the_css_so_here_is_my_setup/">Denkfabrik</a> theme (which I used as a base for legacy)</li>
-<li>to Reddit user <a href="https://www.reddit.com/user/It_Was_The_Other_Guy/">u/It_Was_The_Other_Guy</a> for his <a href="https://www.reddit.com/r/FirefoxCSS/comments/vzcqzn/comment/ig8a8ba/">tip</a> which was very useful in legacy</li>
-<li>to Reddit user <a href="https://www.reddit.com/user/GainghisKhan/">u/GainghisKhan</a> for <a href="https://www.reddit.com/r/FirefoxCSS/comments/wcc9fc/comment/j2aoa8r/">finding a bug and providing a solution idea for it</a> in legacy</li>
-</ul>
+- to <a href="https://github.com/MrOtherGuy">@MrOtherGuy</a> for his <a href="https://github.com/MrOtherGuy/firefox-csshacks">Firefox CSS Hacks</a>
+- to <a href="https://www.reddit.com/user/captainkaba/">u/captainkaba</a> for his <a href="https://www.reddit.com/r/FirefoxCSS/comments/rqo5z6/some_people_asked_for_the_css_so_here_is_my_setup/">Denkfabrik</a> theme (which I used as a base for legacy)
+- to Reddit user <a href="https://www.reddit.com/user/It_Was_The_Other_Guy/">u/It_Was_The_Other_Guy</a> for his <a href="https://www.reddit.com/r/FirefoxCSS/comments/vzcqzn/comment/ig8a8ba/">tip</a> which was very useful in legacy
+- to Reddit user <a href="https://www.reddit.com/user/GainghisKhan/">u/GainghisKhan</a> for <a href="https://www.reddit.com/r/FirefoxCSS/comments/wcc9fc/comment/j2aoa8r/">finding a bug and providing a solution idea for it</a> in legacy
+
