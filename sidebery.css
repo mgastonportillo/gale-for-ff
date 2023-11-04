@@ -1,8 +1,12 @@
 #root.root {
-  --s-frame-bg: #1c1b22 !important;
-  --s-toolbar-bg: #2b2a33 !important;
-  /* --s-frame-fg: #fbfbfe !important;
-	--s-toolbar-fg: #fbfbfe !important; */
+  --gg-black: #1c1b22;
+  --gg-grey: #2b2a33;
+  --gg-white: #fefefe;
+  --gg-red: #d10032;
+  --s-frame-bg: var(--gg-black) !important;
+  --s-toolbar-bg: var(--gg-grey) !important;
+  /* --s-frame-fg: var(--gg-white) !important; */
+  /* --s-toolbar-fg: var(--gg-white) !important; */
 }
 
 /* --- NAV BAR --- */
@@ -57,7 +61,7 @@
 
 .central-box {
   z-index: 1;
-  background: var(--s-frame-bg);
+  background: var(--gg-black);
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
 }
@@ -69,7 +73,7 @@
   left: auto;
   right: -5px;
   content: "";
-  background: #2b2a33;
+  background: var(--gg-grey);
   height: 10px;
   width: 10px;
 }
@@ -79,6 +83,29 @@
 	right: auto;
 	left: -5px;
 } */
+
+.SearchBar {
+  background-color: var(--gg-grey);
+}
+
+.SearchBar .clear-btn {
+  background: transparent !important;
+  opacity: 100%;
+}
+
+.SearchBar .clear-btn:before {
+  background: transparent !important;
+  opacity: 0;
+}
+
+.SearchBar .clear-btn svg {
+  background: transparent !important;
+}
+
+.SearchBar .clear-btn svg:hover {
+  border-radius: var(--search-border-radius);
+  background: var(--gg-red) !important;
+}
 
 .popup {
   margin-top: 50px;

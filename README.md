@@ -14,18 +14,6 @@ workspace. If you find any odd behaviour feel free to send a pull request.
 
 <hr>
 
-I took a break from Firefox and was experimenting with MS Edge. It was lovely
-while I was on Windows, but since I decided to move to Linux full-time now (best
-decision of my life, by the way), Edge is just not a great choice anymore. I
-don't personally care too much about privacy on my browser, and that's not the
-reason why I'm back to Firefox but I won't lie to you: it feels great to have
-high levels of control over it. Edge feels "artificial" on Linux, it has
-different issues depending on the distro and Firefox is just a huge linux
-champion in my opinion. So that's it, my affair with Edge is over and I'm back
-to maintaining this theme actively.
-
-<hr>
-
 ### How to install?
 
 1. In Firefox, go to `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets` to `True`. Make sure you have the <a href="https://www.userchrome.org/how-create-userchrome-css.html">chrome folder</a> within your Firefox profile
@@ -34,9 +22,15 @@ to maintaining this theme actively.
 4. Go to Sidebery settings and paste the content of my `sidebery.css` file into _Styles editor > Sidebar_
 5. Enjoy your new setup!<hr>
 
+Set these settings under appearance in Sidebery (optional but recommended):
+
+<div><img src="image/sidebery-appearance.png"></div>
+
+<hr>
+
 ### Known bugs
 
-- In Sidebery beta, autoshrink triggers when you're moving a tab even though the mouse is still hovering the panel. I decided to disable that characteristic until I find a workaround.
+- Due to a bug that has been present in Firefox for quite some time already, the autoshrink functionality isn't working as intended in Sidebery beta, so I decided to disable such characteristic until I find a workaround. Related <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1818517">issue</a> (thanks <a href="https://github.com/emiham">@emiham</a> for the heads-up)
 - ~~When moving a tab, the tab position indicator doesn't follow the `margin-top` CSS rule for tabs~~  **_Fixed!_**
 
 <hr>
