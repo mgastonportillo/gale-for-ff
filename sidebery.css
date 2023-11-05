@@ -50,7 +50,10 @@
 
 .TabsPanel .new-tab-btn {
   height: var(--tabs-height);
-  margin: 0 4px;
+}
+
+.TabsPanel .new-tab-btns {
+  padding: 0 6px;
 }
 
 /* --- IMPROVEMENTS --- */
